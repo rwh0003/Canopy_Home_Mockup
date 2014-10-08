@@ -9,9 +9,11 @@ body, html {
 }
 
 .page-wrapper {
-	min-height: 100%;
 	width: 100%;
 	position: relative;
+	background-color: rgb(253, 245, 245);
+	background-image: url("home-layers/Content_background_top.png");
+	background-repeat: repeat-x;
 }
 
 .centered {
@@ -21,22 +23,19 @@ body, html {
 
 
 
-/* Header */
+/* Navigation bar */
 
-.header-wrapper {
+.left-nav {
+	display: inline-block;
+	height: 100%;
 	padding: 40px;
-	width: 100%;
+	width: 30%;
 	background: url("home-layers/Left_nav_background.png") repeat;
 } 
-
-.header {
-	width: 971px;
-}
 
 #new-post-button {
 	 color: rgb(247, 147, 30);
 	 font-size: 18px;
-	 float: right;
 }
 
 .nav {
@@ -44,12 +43,12 @@ body, html {
 }
 
 .nav-logo img {
-	width: 300px;
-	height: 140px;
+	width: 100%;
 }
 
 .nav-logo {
 	padding: 10px 5px 0 5px;
+	margin-bottom: 30px;
 }
 
 
@@ -58,25 +57,31 @@ body, html {
 
 .content-wrapper {
 	background-color: rgb(253, 245, 245);
-	min-height: 560px;
-	width: 100%;
-	min-width: 971px;
-	padding-bottom: 170px;
+	background-image: url("home-layers/Content_background_top.png");
+	background-repeat: repeat-x;
 }
 
 .content {
-	position: relative;
-	top:-80px;
-	left: 70px;
-	width: 971px;
+	float: right;
+	display: inline-block;
+	width: 70%;
+	padding: 90px 70px;
 }
 
-.top-background-image {
+
+
+/* Blog post */
+
+.date {
+	background: -webkit-linear-gradient(left, rgb(222, 113, 38), rgb(246, 146, 30)); /* For Safari 5.1 to 6.0 */
+	background: -o-linear-gradient(right, rgb(222, 113, 38), rgb(246, 146, 30)); /* For Opera 11.1 to 12.0 */
+	background: -moz-linear-gradient(right, rgb(222, 113, 38), rgb(246, 146, 30)); /* For Firefox 3.6 to 15 */
+	background: linear-gradient(to right, rgb(222, 113, 38), rgb(246, 146, 30)); /* Standard syntax */
+	height: 40px;
 	width: 100%;
-	height: 175px;
-	background-image: url("home-layers/Content_background_top.png");
-	background-size: contain;
-	background-repeat: repeat-x;
+	color: white;
+	padding: 10px 25px;
+	font-size: 16px;
 }
 
 
@@ -84,24 +89,32 @@ body, html {
 /* Footer */
 
 .footer-wrapper {
-	width: 100%;
-	height: 170px;
-	/*margin-top: -173px;*/
-	position: absolute;
-	bottom: 0;
-	left: 0; 
 	background-color: rgb(247, 147, 30);
+	width:100%;
+	height:158px;
+	margin-top: -10px;
+/*	position:absolute;
+	bottom:0;
+	left:0;*/
+}
+
+.footer-area {
+	margin-top: 10px;
+	width: 971px;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 .footer {
-	width: 971px;
+	font-size: 17px;
+	width: 745px;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 .logos {
-	display: inline-block;
-	position: relative;
-	top: -60px;
-	left: 0;
+	float: left;
+	margin-top: 25px;
 	border-bottom: 2px dotted white;
 	width: 400px;
 }
@@ -112,18 +125,16 @@ body, html {
 }
 
 .links {
-	margin-top: 25px;
+	float: left;
+	margin-top: 15px;
 	width: 275px;
 	color: white;
 	border-right: 2px dotted white;
-	display: inline-block;
 }
 
 .email-submit {
-	display: inline-block;
-	position: relative;
-	top: -40px;
-	left: 300px;
+	float: left;
+	margin: 20px;
 }
 
 #email-submit-button {
@@ -132,7 +143,36 @@ body, html {
 
 
 
-/*
+/* Add post lightbox */
+
+.add-post-box {
+	display: none;
+	background-color: rgb(253, 245, 245);
+	border: 1px solid black;
+	height: 700px;
+	width: 776px;
+	position: fixed;
+	left: 50%;
+	top: 50%;
+	margin: -350px 0 0 -388px;
+	z-index: 9999999;
+}
+
+.add-post-cover {
+	display: none;
+	position: fixed;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	background-color: black;
+	opacity: 0.6;
+	z-index: 9999;
+}
+
+
+
+
 .nav-description {
 	border-top: 3px dotted white;
 	border-bottom: 3px dotted white;
@@ -147,7 +187,7 @@ body, html {
 .search-bar {
 	margin-top: 29px;
 	height: 32px;
-	width: 175px;
+	width: 100%;
 	background-color: white;
 	opacity: .2;
 }
@@ -159,7 +199,7 @@ body, html {
 
 .search-container input {
 	height: 39px;
-	width: 137px;
+	width: 86%;
 	position: relative;
 	top: -36px;
 	left: 13px;
@@ -184,4 +224,3 @@ body, html {
 	margin-left: 28px;
 	font-size: 14px;
 }
-*/

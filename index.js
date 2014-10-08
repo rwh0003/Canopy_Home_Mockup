@@ -1,12 +1,9 @@
 $(document).ready(function() {
-	// $('.content-wrapper').css('height', ($(window).height() - 320));
-
-	var yay = 0, text = $('.content').text();
-	$('#new-post-button').click(function() {
-		if ( !yay ) {
-			$('.content').append('<h2>Yay!</h2>');
-			yay = 1;
-		}
-		$('.content').append('<p>'+text+'</p>');
-	});
+	$('.left-nav').height($('.content-wrapper').height());
+	
+	// $('#new-post-button').click(function() {
+	// 	// bring up a lightbox to add a blog post
+	// 	$('.add-post-cover').fadeIn(1000);
+	// 	$('.add-post-box').fadeIn(1000);
+	// });
 });
